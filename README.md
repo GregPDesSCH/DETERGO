@@ -10,9 +10,9 @@ It's based on what kind of laundry detergent you use, how much space the clothes
 First, you need to [download and install Ruby](https://www.ruby-lang.org/en/downloads/) on your system.
 
 Next, download or clone this repository, and open a terminal. Navigate to the repository directory and type in
-...
+```
 ruby detergo.rb
-...
+```
 
 If you do this correctly and Ruby has been configured properly, you should see a logo made up of independent terminal characters. From there, you can then use the tool to figure out how much laundry detergent you need for your load by using your keyboard.
 

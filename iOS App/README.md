@@ -1,7 +1,7 @@
 # DETERGO
 ## Interactive iOS App by Gregory Desrosiers
 
-![DETERGO iOS App](detergo.png)
+![DETERGO iOS App](detergo-ios.png)
 
 This open-source project is the counterpart iOS App of the DETERGO Ruby-based script; it lets you get an estimate of how much laundry detergent you need to wash your load right through your phone for usability. By using this, you'll get a better idea of how much detergent you need, whether it's pods, liquid, or powder, based on how much laundry you have, how much dirt you have, and how your water supply is.
 

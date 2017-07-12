@@ -1,5 +1,6 @@
 # DETERGO
 ## Interactive Ruby script by Gregory Desrosiers
+For viewing the iOS App, visit https://github.com/GregPDesSCH/DETERGO/tree/master/iOS%20App.
 
 This script file is a command-based calculator that approximately calculates how much laundry detergent you need to wash your clothes properly. 
 

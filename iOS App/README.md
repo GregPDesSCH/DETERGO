@@ -24,10 +24,10 @@ Some inspiration and calculation has been considered while this app has been pro
 
 ## Resources used in designing the project
 Some inspiration has been drawn from the following pages:
-https://tide.com/en-us/how-to-wash-clothes/how-to-do-laundry/how-much-detergent-to-use
-https://tide.com/en-us/how-to-wash-clothes/how-to-do-laundry/how-do-i-know-load-size-for-my-washing-machine
-http://www.water-research.net/index.php/water-treatment/tools/hard-water-hardness
-https://www.fcwa.org/water/hardness.htm
+https://tide.com/en-us/how-to-wash-clothes/how-to-do-laundry/how-much-detergent-to-use  
+https://tide.com/en-us/how-to-wash-clothes/how-to-do-laundry/how-do-i-know-load-size-for-my-washing-machine  
+http://www.water-research.net/index.php/water-treatment/tools/hard-water-hardness  
+https://www.fcwa.org/water/hardness.htm  
 
 I also had inspiration into this project from a bottle of Arm & Hammer Essentials laundry detergent.
 

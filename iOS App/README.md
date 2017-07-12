@@ -20,7 +20,7 @@ This is a one-screen app where all you have to do is select your type of deterge
 
 Some inspiration and calculation has been considered while this app has been programmed; one of the influences is the water hardness level based on a chart provided by the US Environmental Protection Agency.
 
-
+[Click here to see how this was built.](http://gregpdessch.github.io/blogs/detergo.html)
 
 ## Resources used in designing the project
 Some inspiration has been drawn from the following pages:  

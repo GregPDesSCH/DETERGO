@@ -1,0 +1,58 @@
+<!--
+
+    DETERGO (Android App)
+
+    Strings Resource File
+
+    This is where all the strings used by the app are defined.
+
+    Start Date: August 5, 2017
+    End Date:
+
+    File Name: strings.xml
+
+    © 2017 Gregory Desrosiers. All rights reserved.
+
+-->
+
+<resources>
+    <string name="app_name">DETERGO</string>
+    <string name="type_of_detergent">What kind of detergent are you using?</string>
+    <string name="drum_occupancy">How much space is the laundry using in the washing machine?</string>
+    <string name="amount_of_dirt">How much dirt does the laundry have?</string>
+    <string name="water_hardness">What&#39;s the &#39;hardness&#39; of your water supply?</string>
+    <string-array name="type_of_detergent_combo_box">
+        <item>Pod</item>
+        <item>Liquid</item>
+        <item>Powder</item>
+    </string-array>
+    <string-array name="drum_occupancy_combo_box">
+        <item>Less than 1/4</item>
+        <item>1/4</item>
+        <item>Between 1/4 and 1/2</item>
+        <item>1/2</item>
+        <item>Between 1/2 and 3/4</item>
+        <item>3/4</item>
+        <item>Between 3/4 and 9/10</item>
+        <item>9/10</item>
+        <item>More than 9/10</item>
+    </string-array>
+    <string-array name="dirt_level_combo_box">
+        <item>Very Low</item>
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+        <item>Very High</item>
+    </string-array>
+    <string-array name="water_hardness_combo_box">
+        <item>Very Soft (less than 17.1 ppm)</item>
+        <item>Soft (17.1 - 60.0 ppm)</item>
+        <item>Average (60 - 120 ppm)</item>
+        <item>Hard (120 - 180 ppm)</item>
+        <item>Very Hard (more than 180 ppm)</item>
+    </string-array>
+    <string name="too_little_laundry_explanation_message">By doing this, you&#39;ll waste some water;
+        wait until you have enough laundry to fill at least one quarter of the machine&#39;s washing drum.</string>
+    <string name="too_much_laundry_explanation_message">The machine cannot wash the load in one
+        cycle; consider splitting the load into two or more as needed so that they are washed properly. Use this for the partial loads.</string>
+</resources>

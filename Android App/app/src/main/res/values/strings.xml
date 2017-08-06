@@ -20,7 +20,7 @@
     <string name="type_of_detergent">What kind of detergent are you using?</string>
     <string name="drum_occupancy">How much space is the laundry using in the washing machine?</string>
     <string name="amount_of_dirt">How much dirt does the laundry have?</string>
-    <string name="water_hardness">What&#39;s the &#39;hardness&#39; of your water supply?</string>
+    <string name="water_hardness">What\'s the \'hardness\' of your water supply?</string>
     <string-array name="type_of_detergent_combo_box">
         <item>Pod</item>
         <item>Liquid</item>
@@ -51,8 +51,9 @@
         <item>Hard (120 - 180 ppm)</item>
         <item>Very Hard (more than 180 ppm)</item>
     </string-array>
-    <string name="too_little_laundry_explanation_message">By doing this, you&#39;ll waste some water;
-        wait until you have enough laundry to fill at least one quarter of the machine&#39;s washing drum.</string>
+    <string name="calculate_button">Calculate</string>
+    <string name="too_little_laundry_explanation_message">By doing this, you\&#39;ll waste some water;
+        wait until you have enough laundry to fill at least one quarter of the machine\&#39;s washing drum.</string>
     <string name="too_much_laundry_explanation_message">The machine cannot wash the load in one
         cycle; consider splitting the load into two or more as needed so that they are washed properly. Use this for the partial loads.</string>
 </resources>

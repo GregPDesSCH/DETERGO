@@ -18,7 +18,6 @@
 // Package Location
 package io.github.gregpdessch.detergo.dataModels;
 
-import io.github.gregpdessch.detergo.dataModels.DetergentEnumerations;
 
 abstract class Detergent
 {
@@ -55,6 +54,6 @@ abstract class Detergent
     }
 
     /* Abstracted Functions */
-    abstract int calculateAmountNeededForWashing();
+    public abstract int calculateAmountNeededForWashing();
     public abstract String amountNeededForWashing();
 }

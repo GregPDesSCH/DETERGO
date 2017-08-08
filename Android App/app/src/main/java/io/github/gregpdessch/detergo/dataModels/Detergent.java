@@ -19,7 +19,7 @@
 package io.github.gregpdessch.detergo.dataModels;
 
 
-abstract class Detergent
+public abstract class Detergent
 {
     /* Constants */
     static final float changeInAmountBasedOnSoil = 0.25f;

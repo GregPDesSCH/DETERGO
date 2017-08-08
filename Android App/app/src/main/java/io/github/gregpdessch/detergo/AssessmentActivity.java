@@ -19,6 +19,8 @@
 package io.github.gregpdessch.detergo;
 
 // Additional Resources
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -27,6 +29,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 
 import io.github.gregpdessch.detergo.dataModels.DetergentEnumerations.*;
+import io.github.gregpdessch.detergo.dataModels.*;
 
 public class AssessmentActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -40,10 +43,20 @@ public class AssessmentActivity extends AppCompatActivity implements View.OnClic
     // Calculate Button
     private Button calculateButton;
 
+    // Alert Dialog Builder
+    private AlertDialog.Builder builder = null; // Initialized to avoid compilation errors
+
     /* Activity Properties */
+
+    // Preferences
     private DrumCapacityUse drumOccupancy;
     private DirtLevel dirtLevel;
     private WaterHardness waterHardness;
+    private TypeOfDetergent typeOfDetergent;
+
+    // Main Data Unit
+    private Detergent detergent;
+
 
 
     // This is what the activity does while the Android SDK starts to create the activity. (Event listener)
@@ -61,6 +74,9 @@ public class AssessmentActivity extends AppCompatActivity implements View.OnClic
         waterHardnessLevelComboBox = (Spinner) findViewById(R.id.waterHardnessLevelComboBox);
         calculateButton = (Button) findViewById(R.id.calculateButton);
 
+        // Create the dialog builder
+        builder = new AlertDialog.Builder(this);
+
         // Define an event listener for the calculate button.
         calculateButton.setOnClickListener(this);
     }
@@ -68,8 +84,26 @@ public class AssessmentActivity extends AppCompatActivity implements View.OnClic
     @Override
     public void onClick(View view) {
         if (view == calculateButton) {
-            System.out.println("Received the click from the calculate button.");
-            Log.i("Button listener", "Received the click from the calculate button.");
+
+            typeOfDetergent = TypeOfDetergent.values()[typeOfDetergentComboBox.getSelectedItemPosition()];
+            drumOccupancy = DrumCapacityUse.values()[drumOccupancyComboBox.getSelectedItemPosition()];
+            dirtLevel = DirtLevel.values()[dirtLevelComboBox.getSelectedItemPosition()];
+            waterHardness = WaterHardness.values()[waterHardnessLevelComboBox.getSelectedItemPosition()];
+
+            if (typeOfDetergent == TypeOfDetergent.POD)
+                detergent = new PodDetergent(dirtLevel, drumOccupancy, waterHardness);
+            else if (typeOfDetergent == TypeOfDetergent.LIQUID)
+                detergent = new LiquidDetergent(dirtLevel, drumOccupancy, waterHardness);
+            else
+                detergent = new PowderDetergent(dirtLevel, drumOccupancy, waterHardness);
+
+
+            // TODO: Check the result of calculating how much detergent is needed (use an if-else-if block),
+            // then setup and show the appropriate message dialogs the user will receive upon pressing the
+            // calculate button.
+            builder.setMessage("Meep meep").setTitle("AAA").setPositiveButton("OK", null);
+            builder.create().show();
+
         }
     }
 

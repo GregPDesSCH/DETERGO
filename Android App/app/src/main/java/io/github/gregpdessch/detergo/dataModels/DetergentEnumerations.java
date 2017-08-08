@@ -19,6 +19,11 @@ package io.github.gregpdessch.detergo.dataModels;
 
 public final class DetergentEnumerations
 {
+    /* Enum for type of detergent */
+    public enum TypeOfDetergent {
+        POD, LIQUID, POWDER
+    }
+
     /* Enum for how much dirt or soil the laundry has */
     public enum DirtLevel {
         VERY_LOW, LOW, MEDIUM, HIGH, VERY_HIGH

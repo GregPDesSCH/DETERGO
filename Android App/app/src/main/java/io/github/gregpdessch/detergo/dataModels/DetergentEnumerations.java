@@ -20,7 +20,7 @@ package io.github.gregpdessch.detergo.dataModels;
 public final class DetergentEnumerations
 {
     /* Enum for how much dirt or soil the laundry has */
-    enum DirtLevel {
+    public enum DirtLevel {
         VERY_LOW, LOW, MEDIUM, HIGH, VERY_HIGH
     }
 
@@ -28,7 +28,7 @@ public final class DetergentEnumerations
         Enum for how hard the water is depending on the concentration of minerals in the water
         http://www.water-research.net/index.php/water-treatment/tools/hard-water-hardness
     */
-    enum WaterHardness {
+    public enum WaterHardness {
         VERY_SOFT,  // 0 - 17.1 ppm
         SOFT,       // 17.1 - 60.0 ppm
         AVERAGE,    // 60 - 120 ppm
@@ -37,7 +37,7 @@ public final class DetergentEnumerations
     }
 
     /* Enum for how much drum volume is used */
-    enum DrumCapacityUse {
+    public enum DrumCapacityUse {
         LESS_THAN_ONE_QUARTER,
         ONE_QUARTER,
         BETWEEN_ONE_QUARTER_AND_ONE_HALF,
@@ -50,7 +50,7 @@ public final class DetergentEnumerations
     }
 
     /* A flag to tell the frontend on what the helper text should be below the main text. */
-    enum LaundryMachine {
+    public enum LaundryMachine {
         IS_OK_WITH_LAUNDRY_LOAD, HAS_TOO_LITTLE_LAUNDRY, HAS_TOO_MUCH_LAUNDRY
     }
 }

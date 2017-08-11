@@ -52,8 +52,11 @@
         <item>Very Hard (more than 180 ppm)</item>
     </string-array>
     <string name="calculate_button">Calculate</string>
+    <string name="too_little_laundry_title">Too little laundry to wash!</string>
     <string name="too_little_laundry_explanation_message">By doing this, you\&#39;ll waste some water;
         wait until you have enough laundry to fill at least one quarter of the machine\&#39;s washing drum.</string>
+    <string name="too_much_laundry_title">Too much laundry to wash!</string>
     <string name="too_much_laundry_explanation_message">The machine cannot wash the load in one
         cycle; consider splitting the load into two or more as needed so that they are washed properly. Use this for the partial loads.</string>
+    <string name="detergent_amount_title">Amount needed to wash:</string>
 </resources>

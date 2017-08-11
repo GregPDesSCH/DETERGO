@@ -101,7 +101,17 @@ public class AssessmentActivity extends AppCompatActivity implements View.OnClic
             // TODO: Check the result of calculating how much detergent is needed (use an if-else-if block),
             // then setup and show the appropriate message dialogs the user will receive upon pressing the
             // calculate button.
-            builder.setMessage("Meep meep").setTitle("AAA").setPositiveButton("OK", null);
+            builder.setPositiveButton("OK", null);
+
+            if (detergent.laundryLoad() == LaundryMachine.HAS_TOO_LITTLE_LAUNDRY)
+                builder.setTitle(R.string.too_little_laundry_title);
+            else if (detergent.laundryLoad() == LaundryMachine.HAS_TOO_MUCH_LAUNDRY)
+                builder.setTitle(R.string.too_much_laundry_title);
+            else
+                builder.setTitle(R.string.detergent_amount_title);
+
+            builder.setMessage(detergent.amountNeededForWashing());
+
             builder.create().show();
 
         }

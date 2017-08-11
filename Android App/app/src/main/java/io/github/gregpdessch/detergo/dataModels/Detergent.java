@@ -42,7 +42,7 @@ public abstract class Detergent
 
     // Returns a flag on whether or not the amount of laundry is within the manufacturer's
     // recommended limits for a wash cycle.
-    DetergentEnumerations.LaundryMachine laundryLoad() {
+    public DetergentEnumerations.LaundryMachine laundryLoad() {
         switch (this.drumCapacityUse) {
             case LESS_THAN_ONE_QUARTER:
                 return DetergentEnumerations.LaundryMachine.HAS_TOO_LITTLE_LAUNDRY;

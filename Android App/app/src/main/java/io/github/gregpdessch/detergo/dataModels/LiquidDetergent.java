@@ -19,6 +19,10 @@
 // Package Location
 package io.github.gregpdessch.detergo.dataModels;
 
+import android.content.res.Resources;
+import io.github.gregpdessch.detergo.R;
+import io.github.gregpdessch.detergo.dataModels.DetergentEnumerations.*;
+
 public final class LiquidDetergent extends Detergent
 {
     // Constructor
@@ -70,6 +74,16 @@ public final class LiquidDetergent extends Detergent
     // Retrieve the output message based on the parameters given in the model.
     public String amountNeededForWashing()
     {
-        return null;
+        // TODO: Fix the bug that this function creates where an exception is thrown for not finding a resource.
+        // If there's too little or too much laundry to wash, display an invalid message.
+        // Otherwise, get the message for how much detergent needed.
+        switch (this.drumCapacityUse) {
+            case LESS_THAN_ONE_QUARTER:
+                return Resources.getSystem().getString(R.string.too_little_laundry_explanation_message);
+            case MORE_THAN_NINE_TENTHS:
+                return Resources.getSystem().getString(R.string.too_much_laundry_explanation_message);
+            default:
+                return "Fill the measuring cup up to bar " + calculateAmountNeededForWashing() + ".";
+        }
     }
 }

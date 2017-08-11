@@ -18,6 +18,10 @@
 // Package Location
 package io.github.gregpdessch.detergo.dataModels;
 
+import android.content.res.Resources;
+
+import io.github.gregpdessch.detergo.R;
+
 public final class PodDetergent extends Detergent
 {
     // Constructor
@@ -69,6 +73,19 @@ public final class PodDetergent extends Detergent
     // Retrieve the output message based on the parameters given in the model.
     public String amountNeededForWashing()
     {
-        return null;
+        // TODO: Fix the bug that this function creates where an exception is thrown for not finding a resource.
+        // If there's too little or too much laundry to wash, display an invalid message.
+        // Otherwise, get the message for how much detergent needed.
+        switch (this.drumCapacityUse) {
+            case LESS_THAN_ONE_QUARTER:
+                return this.getString(R.string.too_little_laundry_explanation_message);
+            case MORE_THAN_NINE_TENTHS:
+                return this.getString(R.string.too_much_laundry_explanation_message);
+            default:
+                int numberOfPodsNeeded = calculateAmountNeededForWashing();
+                return "Add " + numberOfPodsNeeded + "pod" + (numberOfPodsNeeded != 1 ? "s " : " ") +
+                        "to the load.";
+
+        }
     }
 }

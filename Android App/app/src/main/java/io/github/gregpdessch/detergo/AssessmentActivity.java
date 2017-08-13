@@ -20,6 +20,7 @@ package io.github.gregpdessch.detergo;
 
 // Additional Resources
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -31,7 +32,8 @@ import android.widget.Spinner;
 import io.github.gregpdessch.detergo.dataModels.DetergentEnumerations.*;
 import io.github.gregpdessch.detergo.dataModels.*;
 
-public class AssessmentActivity extends AppCompatActivity implements View.OnClickListener {
+public class AssessmentActivity extends AppCompatActivity implements View.OnClickListener
+{
 
     /* UI Elements */
     // Spinners
@@ -56,6 +58,7 @@ public class AssessmentActivity extends AppCompatActivity implements View.OnClic
 
     // Main Data Unit
     private Detergent detergent;
+
 
 
 
@@ -91,11 +94,11 @@ public class AssessmentActivity extends AppCompatActivity implements View.OnClic
             waterHardness = WaterHardness.values()[waterHardnessLevelComboBox.getSelectedItemPosition()];
 
             if (typeOfDetergent == TypeOfDetergent.POD)
-                detergent = new PodDetergent(dirtLevel, drumOccupancy, waterHardness);
+                detergent = new PodDetergent(dirtLevel, drumOccupancy, waterHardness, this);
             else if (typeOfDetergent == TypeOfDetergent.LIQUID)
-                detergent = new LiquidDetergent(dirtLevel, drumOccupancy, waterHardness);
+                detergent = new LiquidDetergent(dirtLevel, drumOccupancy, waterHardness, this);
             else
-                detergent = new PowderDetergent(dirtLevel, drumOccupancy, waterHardness);
+                detergent = new PowderDetergent(dirtLevel, drumOccupancy, waterHardness, this);
 
 
             // TODO: Check the result of calculating how much detergent is needed (use an if-else-if block),

@@ -18,6 +18,8 @@
 // Package Location
 package io.github.gregpdessch.detergo.dataModels;
 
+import android.content.Context;
+import android.content.res.Resources;
 
 public abstract class Detergent
 {
@@ -30,14 +32,17 @@ public abstract class Detergent
     DetergentEnumerations.DrumCapacityUse drumCapacityUse;
     DetergentEnumerations.WaterHardness waterHardness;
 
+    Context context; // Activity context to fetch resources from XML files
+
     /* Defined Constructor & Functions */
 
     // Main Constructor
     Detergent(DetergentEnumerations.DirtLevel dirtLevel, DetergentEnumerations.DrumCapacityUse drumCapacityUse,
-              DetergentEnumerations.WaterHardness waterHardness) {
+              DetergentEnumerations.WaterHardness waterHardness, Context context) {
         this.dirtLevel = dirtLevel;
         this.drumCapacityUse = drumCapacityUse;
         this.waterHardness = waterHardness;
+        this.context = context;
     }
 
     // Returns a flag on whether or not the amount of laundry is within the manufacturer's

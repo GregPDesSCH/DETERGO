@@ -18,7 +18,7 @@
 // Package Location
 package io.github.gregpdessch.detergo.dataModels;
 
-import android.content.res.Resources;
+import android.content.Context;
 
 import io.github.gregpdessch.detergo.R;
 
@@ -26,9 +26,9 @@ public final class PowderDetergent extends Detergent
 {
     // Constructor
     public PowderDetergent (DetergentEnumerations.DirtLevel dirtLevel, DetergentEnumerations.DrumCapacityUse drumCapacityUse,
-                            DetergentEnumerations.WaterHardness waterHardness)
+                            DetergentEnumerations.WaterHardness waterHardness, Context context)
     {
-        super(dirtLevel, drumCapacityUse, waterHardness);
+        super(dirtLevel, drumCapacityUse, waterHardness, context);
     }
 
     // Calculates amount of detergent needed to wash the load. (In this case, fill level for the powder cup)
@@ -79,9 +79,9 @@ public final class PowderDetergent extends Detergent
         // Otherwise, get the message for how much detergent needed.
         switch (this.drumCapacityUse) {
             case LESS_THAN_ONE_QUARTER:
-                return Resources.getSystem().getString(R.string.too_little_laundry_explanation_message);
+                return context.getString(R.string.too_little_laundry_explanation_message);
             case MORE_THAN_NINE_TENTHS:
-                return Resources.getSystem().getString(R.string.too_much_laundry_explanation_message);
+                return context.getString(R.string.too_much_laundry_explanation_message);
             default:
                 return "Fill the powder measuring cup up to bar " + calculateAmountNeededForWashing() + ".";
         }

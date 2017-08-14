@@ -26,6 +26,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.Spinner;
 
@@ -68,7 +69,13 @@ public class AssessmentActivity extends AppCompatActivity implements View.OnClic
 
         // Let the Android SDK know that this activity is being created, and that a layout is needed.
         super.onCreate(savedInstanceState);
+
+        // Display the status bar at the top of the screen
+        getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
+        getSupportActionBar().show();
+
         setContentView(R.layout.activity_assessment);
+
 
         // Find all of the UI elements that require referencing and event handling by using ID matching.
         typeOfDetergentComboBox = (Spinner) findViewById(R.id.typeOfDetergentComboBox);

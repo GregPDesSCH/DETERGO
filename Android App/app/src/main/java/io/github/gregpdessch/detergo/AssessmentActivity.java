@@ -7,7 +7,7 @@
     This is the default controller that's generated on creating a new activity for the Android app.
 
     Start Date: August 5, 2017
-    End Date:
+    End Date: August 15, 2017
 
     File Name: AssessmentActivity.java
 
@@ -20,11 +20,8 @@ package io.github.gregpdessch.detergo;
 
 // Additional Resources
 import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -33,8 +30,7 @@ import android.widget.Spinner;
 import io.github.gregpdessch.detergo.dataModels.DetergentEnumerations.*;
 import io.github.gregpdessch.detergo.dataModels.*;
 
-public class AssessmentActivity extends AppCompatActivity implements View.OnClickListener
-{
+public class AssessmentActivity extends AppCompatActivity implements View.OnClickListener {
 
     /* UI Elements */
     // Spinners
@@ -50,7 +46,6 @@ public class AssessmentActivity extends AppCompatActivity implements View.OnClic
     private AlertDialog.Builder builder = null; // Initialized to avoid compilation errors
 
     /* Activity Properties */
-
     // Preferences
     private DrumCapacityUse drumOccupancy;
     private DirtLevel dirtLevel;
@@ -59,9 +54,6 @@ public class AssessmentActivity extends AppCompatActivity implements View.OnClic
 
     // Main Data Unit
     private Detergent detergent;
-
-
-
 
     // This is what the activity does while the Android SDK starts to create the activity. (Event listener)
     @Override
@@ -74,6 +66,7 @@ public class AssessmentActivity extends AppCompatActivity implements View.OnClic
         getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
         getSupportActionBar().show();
 
+        // Display the layout of this activity.
         setContentView(R.layout.activity_assessment);
 
 
@@ -93,13 +86,16 @@ public class AssessmentActivity extends AppCompatActivity implements View.OnClic
 
     @Override
     public void onClick(View view) {
+
         if (view == calculateButton) {
 
+            // Retrieve all the specific values from the UI.
             typeOfDetergent = TypeOfDetergent.values()[typeOfDetergentComboBox.getSelectedItemPosition()];
             drumOccupancy = DrumCapacityUse.values()[drumOccupancyComboBox.getSelectedItemPosition()];
             dirtLevel = DirtLevel.values()[dirtLevelComboBox.getSelectedItemPosition()];
             waterHardness = WaterHardness.values()[waterHardnessLevelComboBox.getSelectedItemPosition()];
 
+            // Create the data model instance appropriately.
             if (typeOfDetergent == TypeOfDetergent.POD)
                 detergent = new PodDetergent(dirtLevel, drumOccupancy, waterHardness, this);
             else if (typeOfDetergent == TypeOfDetergent.LIQUID)
@@ -108,9 +104,8 @@ public class AssessmentActivity extends AppCompatActivity implements View.OnClic
                 detergent = new PowderDetergent(dirtLevel, drumOccupancy, waterHardness, this);
 
 
-            // TODO: Check the result of calculating how much detergent is needed (use an if-else-if block),
-            // then setup and show the appropriate message dialogs the user will receive upon pressing the
-            // calculate button.
+            // Have the dialog hold the OK button that basically closes itself, then set the title appropriately
+            // depending on what the laundry load is, among with the respective message, and display it.
             builder.setPositiveButton("OK", null);
 
             if (detergent.laundryLoad() == LaundryMachine.HAS_TOO_LITTLE_LAUNDRY)
@@ -126,5 +121,4 @@ public class AssessmentActivity extends AppCompatActivity implements View.OnClic
 
         }
     }
-
 }

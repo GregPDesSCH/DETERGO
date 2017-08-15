@@ -18,11 +18,11 @@
 // Package Location
 package io.github.gregpdessch.detergo.dataModels;
 
+// Additional Resources
 import android.content.Context;
-import android.content.res.Resources;
 
-public abstract class Detergent
-{
+public abstract class Detergent {
+
     /* Constants */
     static final float changeInAmountBasedOnSoil = 0.25f;
     static final float changeInAmountBasedOnWaterHardness = 0.2f;
@@ -33,6 +33,7 @@ public abstract class Detergent
     DetergentEnumerations.WaterHardness waterHardness;
 
     Context context; // Activity context to fetch resources from XML files
+
 
     /* Defined Constructor & Functions */
 

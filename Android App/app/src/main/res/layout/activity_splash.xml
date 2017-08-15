@@ -16,9 +16,82 @@
         android:textAllCaps="true"
         android:textSize="40sp"
         android:textStyle="bold"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteX="62dp"
-        tools:layout_editor_absoluteY="34dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="64dp" />
+
+    <TextView
+        android:id="@+id/appAuthor"
+        android:layout_width="210dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="140dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/app_author"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appTitle" />
+
+    <TextView
+        android:id="@+id/appAuthorEducation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/app_education"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appAuthor"
+        app:layout_constraintHorizontal_bias="0.512" />
+
+    <TextView
+        android:id="@+id/appAuthorWebsite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:text="@string/app_author_website"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appAuthorEducation" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="318dp"
+        android:layout_height="29dp"
+        android:text="Product Design &amp; Source Code © 2017 Gregory Desrosiers. All rights reserved."
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="13dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="331dp"
+        android:layout_height="45dp"
+        android:text='This project is not affiliated with EXPO DETERGO S.R.I., Rivista Detergo, Detergo Magazine, nor any other company that has "Detergo" as part of the company name.'
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/appIcon" />
+
+    <TextView
+        android:id="@+id/appIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="App icon designed by Freepik from Flaticon."
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/appAuthorWebsite"
+        app:layout_constraintHorizontal_bias="0.505" />
+
 </android.support.constraint.ConstraintLayout>

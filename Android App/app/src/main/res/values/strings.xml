@@ -17,6 +17,9 @@
 
 <resources>
     <string name="app_name">DETERGO</string>
+    <string name="app_author">By Gregory Desrosiers</string>
+    <string name="app_education">University of Waterloo - Software Engineering 2019</string>
+    <string name="app_author_website">https://gregpdessch.github.io</string>
     <string name="type_of_detergent">What kind of detergent are you using?</string>
     <string name="drum_occupancy">How much space is the laundry using in the washing machine?</string>
     <string name="amount_of_dirt">How much dirt does the laundry have?</string>
